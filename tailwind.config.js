@@ -5,8 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        orange: '#FF7245',
+      fontFamily: {
+        boletta: ["bellotaregular", "cursive"],
+        bolettabold: ["bellotabold", "cursive"],
+      },
+      margin: {
+        'm-y-form': '80px',
+      },
+      padding: {
+        'p-x': '40px',
       }
     },
   },
