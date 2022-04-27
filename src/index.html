@@ -10,67 +10,124 @@
 
         <link rel="stylesheet" href="../assets/styles/normalize.css">
         <link rel="stylesheet" href="../assets/styles/output.css">
+        <link rel="stylesheet" href="../assets/styles/style.css">
     </head>
 
-    <body>
-        <header class="flex flex-row flex-nowrap justify-between items-stretch bg-slate-900 text-white h-20 px-[40px]">
-            <strong><p class="font-['bellotabold', cursive]">Hackers Poulette</p></strong>
-            <nav class="flex">
+    <body class="my-0 mx-auto text-base">
+        <header class="flex flex-col items-end bg-[#303030] text-white h-28 gap-y-4 px-[25px] lg:px-[40px] lg:items-between lg:pt-3 lg:h-32">
+            <strong class="mt-3.5 text-3xl ml-0 mr-auto"><p>Hackers Poulette</p></strong>
+            <nav class="flex justify-end gap-x-4">
                 <a href="">Home</a>
                 <a href="">Contact</a>
             </nav>
         </header>
 
-        <div class="flex flex-col items-center my-[80px]">
-            <h1>Contact form</h1>
-            <form action="">
-                <div>
-                    <label for="lastname">
-                        Last name
-                        <input type="text" name="lastname" value="">
-                    </label>
-                    <label for="firstname">
-                        First name
-                        <input type="text" name="firstname" value="">
+        <div class="2xl:hidden flex flex-col items-center pt-[120px] pb-[90px] bg-[#fffdf9] px-[25px] lg:px-[40px]">
+            <h1 class="text-5xl text-center">Welcome dear customer !</h1>
+            <img src="../assets/img/logo.png" alt="logo" class="lg:hover:scale-125 lg:hover:duration-200">
+        </div>
+
+        <div class="2xl:hidden flex flex-col items-center flex-nowrap w-56 my-[120px] mx-auto gap-y-10 p-0 text-base lg:w-80">
+            <h2 class="text-3xl mb-12 font-black">- Contact form -</h2>
+            <form action="" method="" class="flex flex-col gap-y-6 items-center">
+                <label for="lastname">
+                    <p class="text-[#0D8187]">Last name</p>
+                    <input type="text" name="lastname" value="" class="w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-80">
+                </label>
+                <label for="firstname">
+                    <p class="text-[#0D8187]">First name</p>
+                    <input type="text" name="firstname" value="" class="w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-80">
+                </label>
+                <label for="gender">
+                    <p class="text-[#0D8187]">Gender</p>
+                    <select name="gender" id="" class="text-sm font-black w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-80">
+                        <option value="select" class="text-sm">Select gender</option>
+                        <option value="woman" class="text-sm">W</option>
+                        <option value="man" class="text-sm">M</option>
+                        <option value="other" class="text-sm">Other</option>
+                    </select>
+                </label>
+                <div class="flex justify-between">
+                    <label for="email">
+                        <p class="text-[#0D8187]">Email address</p>
+                        <input type="text" name="email" value="" class="w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-80">
                     </label>
                     
-                    <label for="gender">
-                        Gender
-                        <select name="gender" id="">
-                            <option value="select">Select gender</option>
-                            <option value="woman">W</option>
-                            <option value="man">M</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </label>
                 </div>
-                <div>
-                    <label for="email">
-                        Email address
-                        <input type="text" name="email" value="">
-                    </label>
-                    <label for="subject">
-                        Subject
-                        <select name="subject" id="">
-                            <option value="select">Select gender</option>
-                            <option value="buy">Buy</option>
-                            <option value="problem">Problem</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </label>
-                </div>
-                <label for="msg">
-                    Message
-                    <input type="text" name="msg" value="">
+                <label for="subject">
+                    <p class="text-[#0D8187]">Subject</p>
+                    <select name="subject" id="" class="text-sm font-black w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-80">
+                        <option value="buy">Buy</option>
+                        <option value="problem">Problem</option>
+                        <option value="other" selected>Other</option>
+                    </select>
                 </label>
-                <input type="submit" name="send_msg" value="SEND">
+                <label for="msg">
+                    <p class="text-[#0D8187]">Message</p>
+                    <textarea name="msg" value="" placeholder="..." class="w-56 h-36 resize-none scroll-auto focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-80"></textarea>
+                </label>
+                <input type="submit" name="send_msg" value="SEND" class="mt-10 w-28 h-12 mx-auto border-2 border-[#0D8187] bg-[#0D8187] font-black text-white hover:bg-[#303030] hover:text-white hover:border-white hover:transition-colors duration-200">
             </form>
         </div>
 
-        <footer>
-            <p>Hackers Poulette</p>
-            <a href="">Home</a>
-            <a href="">Contact</a>
+        <div class="hidden 2xl:flex justify-around">
+            <div class="flex flex-col items-center pt-[120px] pb-[90px] bg-[#fffdf9] px-[25px] w-[600px]">
+                <h1 class="text-5xl text-center">Welcome dear customer !</h1>
+                <img src="../assets/img/logo.png" alt="logo" class="hover:scale-125 hover:duration-200">
+            </div>
+    
+            <div class="flex flex-col items-center flex-nowrap w-[500px] gap-y-10 p-0">
+                <h2 class="text-3xl mb-12 font-black">- Contact form -</h2>
+                <form action="" method="" class="flex flex-col gap-y-6">
+                    <div class="flex justify-between">
+                        <label for="lastname">
+                            <p class="text-[#0D8187]">Last name</p>
+                            <input type="text" name="lastname" value="" class="w-56 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B]">
+                        </label>
+                        <label for="firstname">
+                            <p class="text-[#0D8187]">First name</p>
+                            <input type="text" name="firstname" value="" class="w-56 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B]">
+                        </label>
+                    </div>
+                    <label for="gender">
+                        <p class="text-[#0D8187]">Gender</p>
+                        <select name="gender" id="" class="text-sm font-black w-56 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] cursor-pointer">
+                            <option value="select" class="text-sm">Select gender</option>
+                            <option value="woman" class="text-sm">W</option>
+                            <option value="man" class="text-sm">M</option>
+                            <option value="other" class="text-sm">Other</option>
+                        </select>
+                    </label>
+                    <div class="flex justify-between">
+                        <label for="email">
+                            <p class="text-[#0D8187]">Email address</p>
+                            <input type="text" name="email" value="" class="w-96 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B]">
+                        </label>
+                        
+                    </div>
+                    <label for="subject">
+                        <p class="text-[#0D8187]">Subject</p>
+                        <select name="subject" id="" class="text-sm font-black w-56 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B]">
+                            <option value="buy">Buy</option>
+                            <option value="problem">Problem</option>
+                            <option value="other" selected>Other</option>
+                        </select>
+                    </label>
+                    <label for="msg">
+                        <p class="text-[#0D8187]">Message</p>
+                        <textarea name="msg" value="" placeholder="..." class="w-[500px] h-36 resize-none scroll-auto focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B]"></textarea>
+                    </label>
+                    <input type="submit" name="send_msg" value="SEND" class="mt-10 w-28 h-12 mx-auto border-2 border-[#0D8187] bg-[#0D8187] font-black text-white hover:bg-[#303030] hover:text-white hover:border-white hover:transition-colors duration-200">
+                </form>
+            </div>
+        </div>
+
+        <footer class="flex bg-[#303030] text-white h-14 gap-y-4 px-[25px] text-base justify-between 2xl:h-28 2xl:pt-3">
+            <p class="mt-3.5 text-lg font-black">Hackers Poulette</p>
+            <div class="mt-[21px] flex gap-x-8 text-xs">
+                <a href="">Home</a>
+                <a href="">Contact</a>
+            </div>
         </footer>
     </body>
 </html>

@@ -1,17 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-    font-family: 'bellotaregular';
-    src: url('../assets/fonts/Bellota-Regular-webfont.woff');
-
-    font-family: 'bellotabold';
-    src: url('../assets/fonts/Bellota-Bold-webfont.woff');
-}
-
-@layer base {
-    html {
-      font-family: bellotaregular, cursive;
-    }
-  }
