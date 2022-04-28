@@ -29,14 +29,14 @@
 
         <div class="2xl:hidden flex flex-col items-center flex-nowrap my-[120px] mx-auto px-[50px] gap-y-10 text-base lg:w-80">
             <h2 class="text-3xl mb-12 font-black">- Contact form -</h2>
-            <form action="" method="" class="flex flex-col gap-y-6 items-center">
+            <form action="../modules/controllers/send_mail.php" method="post" class="flex flex-col gap-y-6 items-center">
                 <label for="lastname">
                     <p class="text-[#0D8187]">Last name</p>
-                    <input type="text" name="lastname" value="" class="w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-96">
+                    <input required type="text" name="lastname" value="" class="w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-96">
                 </label>
                 <label for="firstname">
                     <p class="text-[#0D8187]">First name</p>
-                    <input type="text" name="firstname" value="" class="w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-96">
+                    <input required type="text" name="firstname" value="" class="w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-96">
                 </label>
                 <label for="gender">
                     <p class="text-[#0D8187]">Gender</p>
@@ -50,7 +50,7 @@
                 <div class="flex justify-between">
                     <label for="email">
                         <p class="text-[#0D8187]">Email address</p>
-                        <input type="text" name="email" value="" class="w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-96">
+                        <input required type="text" name="email" value="" class="w-56 h-9 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-96">
                     </label>
                     
                 </div>
@@ -64,7 +64,7 @@
                 </label>
                 <label for="msg">
                     <p class="text-[#0D8187]">Message</p>
-                    <textarea name="msg" value="" placeholder="..." class="w-56 h-36 resize-none scroll-auto focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-96"></textarea>
+                    <textarea required name="msg" value="" placeholder="..." class="w-56 h-36 resize-none scroll-auto focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-96"></textarea>
                 </label>
                 <input type="submit" name="send_msg" value="SEND" class="mt-10 w-28 h-12 mx-auto border-2 border-[#0D8187] bg-[#0D8187] font-black text-white hover:bg-[#303030] hover:text-white hover:border-white hover:scale-105 hover:transition-all duration-200">
             </form>
@@ -78,15 +78,15 @@
     
             <div class="flex flex-col items-center flex-nowrap gap-y-10 py-[90px] w-2/5">
                 <h2 class="text-3xl mb-12 font-black text-[#ffffff]">- Contact form -</h2>
-                <form action="" method="" class="flex flex-col gap-y-6">
+                <form action="../modules/controllers/send_mail.php" method="post" class="flex flex-col gap-y-6">
                     <div class="flex justify-between">
                         <label for="lastname">
                             <p class="text-[#ffffff]">Last name</p>
-                            <input type="text" name="lastname" value="" class="w-56 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] border-none">
+                            <input required type="text" name="lastname" value="" class="w-56 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] border-none">
                         </label>
                         <label for="firstname">
                             <p class="text-[#ffffff]">First name</p>
-                            <input type="text" name="firstname" value="" class="w-56 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] border-none">
+                            <input required type="text" name="firstname" value="" class="w-56 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] border-none">
                         </label>
                     </div>
                     <label for="gender">
@@ -101,7 +101,7 @@
                     <div class="flex justify-between">
                         <label for="email">
                             <p class="text-[#ffffff]">Email address</p>
-                            <input type="text" name="email" value="" class="w-96 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] border-none">
+                            <input required type="text" name="email" value="" class="w-96 h-11 focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] border-none">
                         </label>
                         
                     </div>
@@ -115,7 +115,7 @@
                     </label>
                     <label for="msg">
                         <p class="text-[#ffffff]">Message</p>
-                        <textarea name="msg" value="" placeholder="..." class="w-[500px] h-36 resize-none scroll-auto focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] border-none"></textarea>
+                        <textarea required name="msg" value="" placeholder="..." class="w-[500px] h-36 resize-none scroll-auto focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] border-none"></textarea>
                     </label>
                     <input type="submit" name="send_msg" value="SEND" class="mt-10 w-28 h-12 mx-auto border-2 border-[#FFFFFF] bg-[#303030] font-black text-white hover:scale-105 hover:transition-transform duration-200">
                 </form>
