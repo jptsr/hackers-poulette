@@ -3,3 +3,99 @@
 body{
     font-family: 'Bellota Text', cursive;
 }
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: white;
+    background-color: #303030;
+    gap: 16px;
+    padding: 0 25px;
+    height: 112px;
+}
+
+.marque{
+    margin-top: 14px;
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 30px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    font-size: 16px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #303030;
+    padding: 0 25px;
+    height: 56px;
+}
+
+.marque-footer{
+    margin-top: 14px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.links{
+    display: flex;
+    gap: 8px;
+    margin-top: 21px;
+    font-size: 12px;
+}
+
+.mail-send{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 75px auto;
+}
+
+.title{
+    font-size: 31px;
+}
+
+.contact-again{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn{
+    height: 48px;
+    width: 185px;
+    background-color: #0D8187;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    background-color: #303030;
+    transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 1024px) {
+    .header{
+        padding-top: 12px;
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 128px;
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    .footer{
+        padding-top: 12px;
+        height: 112px;
+    }
+}
