@@ -1,11 +1,14 @@
-<?php require 'header.php'; ?>
+<?php
+    require 'header.php';
+    require '../controllers/destroy_session.php';
+?>
 
 <div class="mail-send">
     <h1 class="title"><strong>Something went wrong :(</strong></h1>
 
     <img src="../../assets/img/logo.png" alt="logo">
 
-    <p>Error messages</p>
+    <p>Informations incorrect or empty</p>
 
     <form action="../../src/index.html" method="post" class="contact-again">
         <label for="contact">Retourn to the contact page and try again</label>
