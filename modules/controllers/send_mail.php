@@ -24,7 +24,7 @@
     
         //Recipients
         $mail->setFrom($_SESSION['email'], $sender_name);
-        $mail->addAddress('test.dvlpt22@gmail.com');
+        $mail->addAddress($_SESSION['email']);
     
         //Content
         $mail->isHTML(true);
