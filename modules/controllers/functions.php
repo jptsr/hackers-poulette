@@ -8,15 +8,4 @@
             header('location: ../views/send_mail_view.php');
         }
     }
-
-    // function returnVar ($var)
-    // {
-    //     return $var;
-    // }
-
-    // function lastNameErr ($lastname)
-    // {
-    //     $error_msg = (isset($lastname)) ? ($error_msg = ($lastname == null) ? 'Invalid last name': '') : 'Empty last name';
-    //     return $error_msg;
-    // }
 ?>

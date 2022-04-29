@@ -1,6 +1,7 @@
 <?php
     require 'header.php';
-    require '../controllers/destroy_session.php';
+
+    session_start();
 ?>
 
 <div class="mail-send">
@@ -10,7 +11,14 @@
 
     <p>Informations incorrect or empty</p>
 
-    <form action="../../src/index.html" method="post" class="contact-again">
+    <?= '<p>' . $_SESSION['err_lname'] . '</p>' ?>
+    <?= '<p>' . $_SESSION['err_fname'] . '</p>' ?>
+    <?= '<p>' . $_SESSION['err_gender'] . '</p>' ?>
+    <?= '<p>' . $_SESSION['err_email'] . '</p>' ?>
+    <?= '<p>' . $_SESSION['err_subject'] . '</p>' ?>
+    <?= '<p>' . $_SESSION['err_msg'] . '</p>' ?>
+
+    <form action="../controllers/destroy_session.php" method="post" class="contact-again">
         <label for="contact">Retourn to the contact page and try again</label>
         <input type="submit" name="contact" value="Contact form" class="btn">
     </form>

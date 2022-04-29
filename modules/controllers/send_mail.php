@@ -4,6 +4,7 @@
     use PHPMailer\PHPMailer\SMTP;
     
     require '../../vendor/autoload.php';
+    require '../../src/.hidden/pwd.php';
 
     session_start();
 
@@ -13,12 +14,12 @@
 
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'test.dvlpt22@gmail.com';
-        $mail->Password = 'gmaateaqgbvmnaiz';
+        $mail->Password = $pwd;
         $mail->Port = 587;
     
         //Recipients

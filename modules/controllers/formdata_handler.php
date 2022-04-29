@@ -36,6 +36,20 @@
                 return $verified_name;
             }
         }
+
+        public function errorMsgLast () 
+        {
+            $data = $this -> nameReady();
+            
+            return ($this -> name) ? ($error = ($data == null) ? 'Invalid last name' : '') : 'Empty last name';
+        }
+
+        public function errorMsgFirst () 
+        {
+            $data = $this -> nameReady();
+            
+            return ($this -> name) ? ($error = ($data == null) ? 'Invalid first name' : '') : 'Empty first name';
+        }
     }
 
     class Gender
@@ -68,6 +82,12 @@
                 $verified_gender = null;
                 return $verified_gender;
             }
+        }
+
+        public function errorMsg () 
+        {
+            $data = $this -> genderReady ();
+            return ($this -> gender) ? ($error = ($data == null) ? 'Invalid lastname' : '') : 'Empty lastname';
         }
     }
 
@@ -104,6 +124,12 @@
                 return $verified_email;
             }
         }
+
+        public function errorMsg () 
+        {
+            $data = $this -> emailAddressReady ();
+            return ($this -> email) ? ($error = ($data == null) ? 'Invalid lastname' : '') : 'Empty lastname';
+        }
     }
 
     class Subject
@@ -136,6 +162,12 @@
                 $verified_subject = null;
                 return $verified_subject;
             }
+        }
+
+        public function errorMsg () 
+        {
+            $data = $this -> subjectReady();
+            return ($this -> subject) ? ($error = ($data == null) ? 'Invalid subject' : '') : 'Empty subject';
         }
     }
 
@@ -171,6 +203,12 @@
                 $verified_msg = null;
                 return $verified_msg;
             }
+        }
+
+        public function errorMsg () 
+        {
+            $data = $this -> verifyMsg();
+            return ($this -> msg) ? ($error = ($data == null) ? 'Invalid subject' : '') : 'Empty subject';
         }
     }
 ?>
