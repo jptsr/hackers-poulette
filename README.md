@@ -1,6 +1,6 @@
 # hackers-poulette
 
-*** Create a contact form from scratch (HTML-CSS-Tailwind-JS-PHP) in 3 days ***  
+***Create a contact form from scratch (HTML-CSS-Tailwind-JS-PHP) in 3 days***  
 
 ## Mock up
 
@@ -10,6 +10,6 @@
 
 Styled with Tailwind -
 Hosted on Heroku -
-Composer and PHPMailer -
+Composer and PHPMailer
 
 [Hackers-poulette](https://hackers-poulette-jp.herokuapp.com/)
