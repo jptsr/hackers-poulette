@@ -23,8 +23,8 @@
         $mail->Port = 587;
     
         //Recipients
-        $mail->setFrom('test.dvlpt22@gmail.com');
-        $mail->addAddress($_SESSION['email'], $sender_name);
+        $mail->setFrom($_SESSION['email'], $sender_name);
+        $mail->addAddress('test.dvlpt22@gmail.com', 'Support');
     
         //Content
         $mail->isHTML(true);
