@@ -11,6 +11,10 @@
         <link rel="stylesheet" href="./assets/styles/normalize.css">
         <link rel="stylesheet" href="./assets/styles/output.css">
         <link rel="stylesheet" href="./assets/styles/style.css">
+
+        <style>
+            input[type="text"]#website { display: none; }
+        </style>
     </head>
 
     <body class="my-0 mx-auto text-base">
@@ -66,6 +70,7 @@
                     <p class="text-[#0D8187]">Message</p>
                     <textarea required name="msg" value="" placeholder="..." class="w-56 h-36 resize-none scroll-auto focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] lg:w-96"></textarea>
                 </label>
+                <input id="website" name="website" type="text" value=""/>
                 <input type="submit" name="send_msg" value="SEND" class="mt-10 w-28 h-12 mx-auto border-2 border-[#0D8187] bg-[#0D8187] font-black text-white hover:bg-[#303030] hover:text-white hover:border-white hover:scale-105 hover:transition-all duration-200">
             </form>
         </div>
@@ -117,6 +122,7 @@
                         <p class="text-[#ffffff]">Message</p>
                         <textarea required name="msg" value="" placeholder="..." class="w-[500px] h-36 resize-none scroll-auto focus:ring-1 focus:ring-[#0D8187] focus:border-[#09666B] border-none"></textarea>
                     </label>
+                    <input id="website" name="website" type="text" value=""/>
                     <input type="submit" name="send_msg" value="SEND" class="mt-10 w-28 h-12 mx-auto border-2 border-[#FFFFFF] bg-[#303030] font-black text-white hover:scale-105 hover:transition-transform duration-200">
                 </form>
             </div>
@@ -129,5 +135,7 @@
                 <a href="">Contact</a>
             </div>
         </footer>
+
+        <script src="./assets/scripts/honeypot.js"></script>
     </body>
 </html>
