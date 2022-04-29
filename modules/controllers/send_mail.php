@@ -8,7 +8,8 @@
 
     session_start();
 
-    $sender_name = $_SESSION['lastname'] . ' ' .  $_SESSION['firstname'] . ' (' . $_SESSION['gender'] . ')';
+    $sender_name = $_SESSION['lastname'] . ' ' .  $_SESSION['firstname'];
+    $all_msg = $sender_name . '<br>' . $_SESSION['gender'] . '<br>' .  $_SESSION['email'] . '<br>' . $_SESSION['subject'] . '<br>' . $_SESSION['msg'];
 
     $mail = new PHPMailer(true);
 
@@ -29,8 +30,8 @@
         //Content
         $mail->isHTML(true);
         $mail->Subject = $_SESSION['subject'];
-        $mail->Body = $_SESSION['msg'];
-        $mail->AltBody = $_SESSION['msg'];
+        $mail->Body = $all_msg;
+        $mail->AltBody = $all_msg;
     
         $mail->send();
 
