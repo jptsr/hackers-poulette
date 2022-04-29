@@ -7,7 +7,7 @@
         public $subject;
         public $msg;
 
-        function __construct($lastname, $firstname, $gender, $email, $subject, $msg) {
+        public function __construct($lastname, $firstname, $gender, $email, $subject, $msg) {
             $this -> lastname = $lastname;
             $this -> firstname = $firstname;
             $this -> gender = $gender;
@@ -151,6 +151,47 @@
             } else {
                 return null;
             }
+        }
+    }
+
+    class Lastname {
+        public $lastname;
+
+        public function __construct($lastname) {
+            $this -> lastname = $lastname;
+        }
+
+        private function verifyLastName () :string {
+            if (isset($this -> lastname)) {
+                $regex_digit = '/\d+/';
+                $regex_special_char = '/[#$%&*()+=\-\[\];,.\/{}|":<>?~\\\\]/';
+                $nodigit = ( preg_match($regex_digit, $this -> lastname) ) ? false : true;
+                $nochar = ( preg_match($regex_special_char, $this -> lastname) ) ? false : true;
+                if ($nodigit == true and $nochar == true) {
+                    return $this -> lastname;
+                } else {
+                    $err_lname = 'Invalid last name';
+                    return $err_lname;
+                }
+            } else {
+                return $err_lname = 'No last name';
+            }
+        }
+
+        public function lastNameReady () :string {
+        $verified_lastname = $this -> verifyLastName();
+            if ($verified_lastname  !== 'Invalid last name' AND $verified_lastname !== 'No last name') {
+                return (string) $verified_lastname;
+            } else {
+                $verified_lastname = null;
+                return  (string) $verified_lastname;
+            }
+        }
+
+        public function __toString()
+        {
+            $lastname_tostring = $this -> lastNameReady();
+            return (string) $lastname_tostring;
         }
     }
 ?>
