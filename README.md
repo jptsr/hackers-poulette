@@ -7,7 +7,7 @@
 Creation of a contact form. Structured with HTML, styled with Tailwind and CSS and hosted on Heroku.  
 The user needs to complete a bunch of inputs (last name, first name, gender, email address, subject and the message). All the inputs needs to be completed in order to submit the form. The data received are sanitized and processed in order to know if they are valid or not. If all of the data are correctly sanitized and valid, the mail is send through a gmail SMTP (the user is redirect to an other page where he receives the confirmation). If one of the data is wrong, the mail is not send and the user is redirect to an other page where his error(s) is/are shown. He is asked to complete the form again (button).  
 In order to send the mail, PHPMailer is used (through composer). There's also a Honeypot technique to prevent Spam.  
-Obviously, the website is responsive.  
+Obviously, the website is responsive and I tried to use a MVC pattern.  
 
 ## Mock up
 
